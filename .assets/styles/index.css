@@ -1,0 +1,239 @@
+/* Jeg setter alltid disse som standard, skrur av margin og padding på hele nettsiden */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Endre stilene på hele nettsiden */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: sans-serif, system-ui;
+    background-color: #2e3440;
+    color: #f0f0f0;
+}
+
+/* Fjerner scroll-bar */
+body.ingen-scroll {
+    overflow-y: hidden;
+}
+
+/* Endre stilene på headingene */
+h2 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+/* Endre stilene på paragraf-teksten */
+p {
+    text-wrap: wrap;
+    font-size: 1em;
+}
+
+/* Endre stilene på bildet */
+img {
+    width: 50px;
+    height: auto;
+    margin: auto;
+}
+
+ul {
+    margin: 10px;
+    list-style-position: inside;
+}
+
+pre {
+    text-align: left;
+    color: #81a1c1;
+    background-color: #4c566a;
+    border-radius: 10px;
+}
+
+.htmlkode-img {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.csskode-img {
+    width: 50%;
+    height: auto;
+}
+
+.jskode-img {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* Div klasse for å sentrere alt */
+#hoved {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#innholdfortegnelse {
+    text-align: left;
+    background: #4c566a;
+    padding: 0!important;
+    border-radius: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+#innholdfortegnelse > ul > li > .innhold-knapp {
+    background: none;
+    margin: 0;
+    text-decoration: underline;
+}
+
+/* Endrer stilen for side-divene */
+.side {
+    display: none;
+    max-width: 40%;
+    margin: 0 auto; /* Sørger for at det er sentrert */
+}
+/* Gjør siden synlig når vis klassen er blitt lagt på */
+.side.vis {
+    display: block;
+}
+
+/* Kort som vises på hjemmesiden */
+.kort-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.kort {
+    background-color: #4c566a;
+    padding: 0 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Endrer stilen på knapp */
+.knapp {
+    display: inline-block;
+    margin: 10px;
+    background-color: #81a1c1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.knapp.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.knapp:hover {
+    transform: scale(1.08);
+    transition: 0.7s;
+    background-color: #5e81ac;
+}
+
+/* Style the responsive navbar */
+.menu-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    margin-left: 5px;
+    top: 5px;
+    left: 5px;
+    z-index: 1000;
+}
+.menu-button .bar {
+    width: 32px;
+    height: 5px;
+    border-radius: 5px;
+    background: white;
+    margin: 3px 0px;
+}
+
+
+/* Endre utseende på knappene */
+#navigasjon {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#navigasjon button:hover {
+    transform: scale(1.03);
+    transition: 0.7s;
+    background-color: #5e81ac;
+}
+
+/* Endre utseende på knappene */
+button {
+    margin: 10px 2px;
+    background-color: #81a1c1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+@media (max-width: 880px) {
+  .menu-button {
+    display: flex;
+  }
+
+    #innholdfortegnelse {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 999;
+        padding-top: 60px;
+    }
+
+    #innholdfortegnelse.open {
+        display: block;
+    }
+
+    #innholdfortegnelse {
+        position: static;
+        width: 95%;
+        margin: 40px 0;
+    }
+
+    .side {
+        max-width: 100%;
+    }
+}
+
+
+/* Light mode for the people that prefers that */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    
+    button {
+        border: 1px solid #333;
+        background-color: green;
+    }
+
+    img {
+        filter: invert(1);
+    }
+}

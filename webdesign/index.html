@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../.assets/styles/index.css">
+    <link rel="shortcut icon" href="../.assets/img/crown.svg" type="image/x-icon">
+    <title>Utvikling Prosjekt</title>
+</head>
+<body>
+    <!-- Pil til høyre / venstre for å gå frem / tilbake -->
+    <!-- Pil opp for å gå til hjemsiden -->
+    <!-- "H" for å gå til hjemsiden -->
+    <!-- Pil ned for å gå til hovedsiden for kurs -->
+    <!-- "K" for å gå til hovedsiden for kurs -->
+    <div id="hoved">
+        <div class="menu-button" id="menu-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div id="innholdfortegnelse">
+            <ul>
+                <li><button class="innhold-knapp" id="innhold-hjem">Home</button></li>
+                <li><button class="innhold-knapp" id="innhold-kursinnhold">Parts in this course</button></li>
+                <li><button class="innhold-knapp" id="innhold-del1">Del 1: General Information</button></li>
+                <li><button class="innhold-knapp" id="innhold-del2">Del 2: HTML</button></li>
+                <li><button class="innhold-knapp" id="innhold-del3">Del 3: CSS</button></li>
+                <li><button class="innhold-knapp" id="innhold-del4">Del 4: JavaScript</button></li>
+                <li><button class="innhold-knapp" id="innhold-konklusjon">Conclusion</button></li>
+            </ul>
+        </div>
+        <div id="hjem" class="side">
+            <img src="../.assets/img/crown.svg" alt="Krone">
+            <h2>Welcome!</h2>
+            <p>This is a course where you will learn about wedesign with HTML, CSS and JavaScript.</p>
+            <br><a href="../index.html" class="knapp">Go home</a>
+        </div>
+        <!-- Jeg skal lage kurs i HTML, CSS og JavaScript, med mest fokus på Javascript -->
+        <div id="innhold" class="side">
+            <h2>Parts in this course</h2>
+            <p>This course will be seperated into three parts, where each part focuses on one of the three most important programming languages for webdesign: HTML, CSS and JavaScript.</p>
+            <br>
+            <ul>
+                <li>Part 1: General information</li>
+                <li>Part 2: HTML</li>
+                <li>Part 3: CSS</li>
+                <li>Part 4: JavaScript</li>
+            </ul>
+        </div>
+        <div id="del1" class="side">
+            <h2>Del 1: General information</h2>
+            <p>When it comes to webdesign there is 3 programming languages you need to be familiar with, these are: HTML, CSS and JavaScript.</p>
+            <br>
+            <p><b>HTML (HyperText Markup Language)</b> is used the make the structure and text of a website.</p>
+            <p><b>CSS (Cascading Style Sheets)</b> is used to design the layout of a webpage.</p>
+            <p><b>JavaScript (Noen ganger forkortet til JS)</b> is used to add interactivity and functionality to a website.</p>
+        </div>
+        <div id="del2" class="side">
+            <h2>Part 2: HTML</h2>
+            <p>Below is an example image of the HTML structure:</p>
+            <img src="../.assets/img/HTML-Struktur.png" alt="HTML code" class="htmlkode-img">
+            <p>HTML consists of elements built from tags. A tag is a code that tells the browser what kind of content it is and how it should be displayed.</p>
+            <p>For example, to create a heading, you use h1 - h6 (different sizes).</p>
+            <p>When writing code in Visual Studio Code (a program used by many for coding), you can use shorthand versions like h1, p, a, img.</p>
+            <p>HTML code is quite easy to understand: p stands for paragraphs, and h1, h2... (up to h6) are different headings.</p>
+            <br>
+            <h3>Link CSS, Favicon, and JavaScript</h3>
+            <ul>
+                <li>CSS can be linked by typing the shorthand <code>link:css</code></li>
+                <li>Favicon can be linked by typing the shorthand <code>link:favicon</code></li>
+                <li>JavaScript can be linked by typing the shorthand <code>script:src</code></li>
+            </ul>
+
+            <h3>To Create a New Line</h3>
+            <p>To create a new line in HTML, you can use the &lt;br&gt; tag.</p>
+        </div>
+
+        <div id="del3" class="side">
+            <h2>Part 3: CSS</h2>
+            <p>CSS (Cascading Style Sheets) is used for styling and the layout of a website.</p>
+            <img src="../.assets/img/CSS-Struktur.png" alt="CSS Code" class="csskode-img">
+            <p>In CSS, you have the ability to change colors, fonts, margins, and padding, as well as the placement of elements on the page. This is done by using the HTML elements in the code. For example, you can style p by doing the following:</p>
+            <pre>
+            p {
+                color: red;
+                font-size: 1.2em;
+            }</pre>
+            <p>This will make all paragraphs on the page red and slightly larger.</p>
+            <p>You can also style elements based on classes and IDs. For example, if you have a div with the class "kort", you can style it like this:</p>
+            <pre>
+            .kort {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            }</pre>
+            <p>You can create a hover effect when the mouse pointer is over an element:</p>
+            <pre>
+            .knapp:hover {
+                transform: scale(1.08);
+                transition: 0.7s;
+                background-color: #5e81ac;
+            }
+            </pre>
+            <p>This will give all elements with the class "kort" a light gray background, a gray border, rounded corners, and some padding and margin to make it more visually appealing.</p>
+            <p>CSS is a powerful tool for making your website more attractive and user-friendly, and it's important to learn it to create great websites!</p>
+        </div>
+
+        <div id="del4" class="side">
+            <h2>Part 4: JavaScript</h2>
+            <p>JavaScript (JS) is used to add interactivity and functionality to a website.</p>
+            <p>When writing JavaScript code, you can change the content of the page, react to user actions, and much more. Often you write "." to perform actions.</p>
+            <img src="../.assets/img/JavaScript-Struktur.png" alt="JavaScript Code" class="jskode-img">
+            <p>Here you see it says <code>document.getElementById('element-id')</code></p>
+            <p>This method is used to find an HTML element based on its ID and manipulate it. The first part, "document," simply says it is the document being manipulated, and the second part is the code getElementById which is used to find an element in the code with an ID.</p>
+            <p><code>document.addEventListener("click", function() { ... });</code> is used to listen for click events on an HTML element.</p>
+            <p>If, else if, and else are used to create conditions in JavaScript. For and while are used to create loops.</p>
+            <p>querySelector and querySelectorAll are used to find elements in the HTML code based on CSS selectors.</p>
+            <pre><code>
+            // Example: Change text upon click
+            document.getElementById("minKnapp").addEventListener("click", function() {
+                document.getElementById("minTekst").innerHTML = "You clicked!";
+            });
+            </code></pre>
+            <br>
+            <pre><code>
+            // Example: if/else
+            let age = 18;
+            if (age >= 18) {
+                console.log("You are an adult");
+            } else {
+                console.log("You are not an adult");
+            }
+            </code></pre>
+            <br>
+            <pre><code>
+            // Example: for-loop
+            for (let i = 0; i < 5; i++) {
+                console.log(i);
+            }
+            </code></pre>
+            <p>These are just a few examples of what JavaScript can do, and there is much more to learn about this powerful language for web development!</p>
+        </div>
+
+        <div id="konklusjon" class="side">
+            <h2>Conclusion</h2>
+            <p>This is the end of the course. I hope you have learned something new and exciting about web design! 🧑‍💻</p>
+        </div>
+
+    <div id="navigasjon">
+        <button id="forrige-knapp" onclick="forrige()">Previous side</button>
+        <button id="hjem-knapp" onclick="hjem()"">Home</button>
+        <button id="neste-knapp" onclick="neste()"">Next page</button>
+    </div>
+    <script src="../.assets/script/index.js"></script>
+</body>
+</html>
