@@ -39,7 +39,9 @@ function forrige() {
 // Legger til event listeners for knappene for å navigere mellom sidene ved hjelp av piltastene
 document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowRight') neste(); // For å gå til neste side
+    else if (e.key === 'd' || e.key === 'D') neste(); // For å gå til hjemsiden ved å trykke 'd'
     else if (e.key === 'ArrowLeft') forrige(); // For å gå til forrige side
+    else if (e.key === 'a' || e.key === 'A') forrige(); // For å gå til hjemsiden ved å trykke 'd'
     else if (e.key === 'h' || e.key === 'H') hjem(); // For å gå til hjemsiden ved å trykke 'h'
     else if (e.key === 'ArrowUp') hjem(); // For å gå til hjemsiden ved å trykke pil opp
     else if (e.key === 'ArrowDown') window.location.href = '../index.html'; // For å gå til hovedsiden for kurs ved å trykke pil ned
